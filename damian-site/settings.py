@@ -1,3 +1,14 @@
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+DEBUG = True
+
+SECRET_KEY = 'django-insecure-1234567890abcdefghijklmnopqrstuv'
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -18,7 +29,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'my_django_app.urls'
+ROOT_URLCONF = 'damian-site.urls'
 
 TEMPLATES = [
     {
@@ -36,7 +47,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'my_django_app.wsgi.application'
+WSGI_APPLICATION = 'damian-site.wsgi.application'
 
 DATABASES = {
     'default': {
