@@ -1,15 +1,89 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja Aplikacja Django</title>
+    <title>DG - SYSTEM</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
-<body class="bg-gray-100">
-    <div class="container mx-auto text-center py-10">
-        <h1 class="text-4xl font-bold">Witaj w Mojej Aplikacji Django!</h1>
-        <p class="mt-4 text-lg">To jest strona główna aplikacji z użyciem Tailwind CSS.</p>
-    </div>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-blue-900 text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold">DG - SYSTEM Strona Firmowa</span>
+                </div>
+               
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-cover bg-center bg-no-repeat text-white py-20" style="background-image: url('{% static 'app/images/robot.webp' %}')">
+        <div class="container mx-auto px-6 text-center bg-blue-900 bg-opacity-75 py-10 rounded-lg">
+            <h1 class="text-5xl font-bold mb-4">Automatyzacja dla Twojej Firmy</h1>
+            <p class="text-xl mb-8">Profesjonalny montaż i serwis robotów przemysłowych</p>
+            
+        </div>
+    </div>      
+
+    <!-- Services Section -->
+    <section id="services" class="py-6">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Nasze Usługi</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Montaż Robotów</h3>
+                    <p>Profesjonalna instalacja robotów przemysłowych różnych producentów</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Serwis</h3>
+                    <p>Kompleksowa obsługa serwisowa i konserwacja instalacji</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Programowanie</h3>
+                    <p>Programowanie robotów i integracja z istniejącymi systemami</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-100 py-6">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4">Skontaktuj się z nami</h2>
+            <div class="max-w-lg mx-auto">
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <div class="mb-6">
+                        <p class="text-gray-700"><strong>Telefon:</strong> +48 123 456 789</p>
+                        <p class="text-gray-700"><strong>Email:</strong> kontakt@dgtech.pl</p>
+                        <p class="text-gray-700"><strong>Adres:</strong> 67, 21-411 Wola Burzecka</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white mt-auto">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">DG-TECH Damian Golba</h3>
+                    <p class="text-blue-200">Profesjonalna automatyzacja produkcji</p>
+                </div>
+                <div class="flex space-x-4">
+                    
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center">
+                <p>&copy; 2025</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
